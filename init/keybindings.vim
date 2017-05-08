@@ -74,8 +74,6 @@ map <M-D-Right> :bn<CR>
 vmap <tab> >gv
 vmap <s-tab> <gv
 
-" map <leader>rt :!~/.vim/bin/update_ctags 2>/dev/null &<CR>
-
 " Git blame
 map <leader>g   :Gblame<CR>
 

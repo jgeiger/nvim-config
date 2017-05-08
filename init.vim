@@ -66,6 +66,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'benekastah/neomake', Cond(has('nvim'))
 
 Plug 'christoomey/vim-system-copy'
+Plug 'Valloric/YouCompleteMe'
+Plug 'ervandew/supertab'
 
 "
 " Searching
@@ -84,12 +86,16 @@ Plug 'junegunn/fzf.vim'
 " Navigation
 "
 Plug 'scrooloose/nerdtree'
-" Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
+Plug 'craigemery/vim-autotag'
 
 "
 " Languages
 "
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'godoctor/godoctor.vim' " Some refactoring tools
+Plug 'jodosha/vim-godebug' " Debugger integration via delve
+
 Plug 'vim-ruby/vim-ruby'
 " Plug 'markcornick/vim-hashicorp-tools'
 Plug 'pangloss/vim-javascript'
