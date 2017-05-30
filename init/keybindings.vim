@@ -105,10 +105,7 @@ imap <F1>           <Nop>
 " Easy access to the shell
 "map <Leader><Leader> :!
 
-" AckGrep current word
-map <leader>a :call AgGrep()<CR>
-" AckVisual current selection
-vmap <leader>a :call AgVisual()<CR>
+noremap <leader>a :Ack <cword><cr>
 
 " Recalculate diff when it gets messed up.
 nmap du :diffupdate<CR>

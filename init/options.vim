@@ -22,7 +22,6 @@ set autoindent
 set smarttab                    " Use shiftwidth to tab at line beginning
 set shiftwidth=2                " Width of autoindent
 set number                      " Line numbers
-set relativenumber              " Relative Line numbers
 set nowrap                      " No wrapping
 set backspace=indent,eol,start " Let backspace work over anything.
 set wildignore+=tags               " Ignore tags when globbing.
