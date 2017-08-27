@@ -121,6 +121,7 @@ Plug 'elzr/vim-json'
 " Plug 'powerman/vim-plugin-AnsiEsc.git'
 " Plug 'lucidstack/hex.vim'
 " Plug 'mattreduce/vim-mix'
+Plug 'vim-scripts/indentpython.vim'
 
 "
 " Development Tool Integration
