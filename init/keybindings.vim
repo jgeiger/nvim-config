@@ -157,3 +157,5 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 " nmap <leader>tb :TagbarToggle<CR>
 
 " nmap <F8> :TagbarToggle<CR>
+
+nmap <silent> <leader>rt :set tabstop=2 shiftwidth=2 expandtab<CR>:retab<CR>
