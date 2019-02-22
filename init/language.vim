@@ -39,4 +39,5 @@ autocmd FileType ruby imap  <Space>=><Space>
 " Open all folds in Markdown.
 autocmd FileType mkd normal zR
 
+set nospell
 autocmd FileType gitcommit,mail,mkd,text set spell
