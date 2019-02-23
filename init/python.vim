@@ -10,3 +10,7 @@ au BufNewFile,BufRead *.py
     \| set expandtab
     \| set autoindent
     \| set fileformat=unix
+
+" add debugger
+map <leader>db oimport pdb; pdb.set_trace()<ESC>
+
