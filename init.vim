@@ -16,15 +16,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'chriskempson/base16-vim'
 
 "
-" Rails
-"
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-endwise'
-" Plug 'ecomba/vim-ruby-refactoring'
-" Plug 'nelstrom/vim-textobj-rubyblock'
-" Plug 'jgdavey/vim-blockle'
-
-"
 " General Editing
 "
 " Plug 'tpope/vim-repeat'
@@ -40,7 +31,6 @@ Plug 'tpope/vim-unimpaired'
 " Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'ervandew/supertab'
 " Plug 'mgamba/j-split'
 " Plug 'matt-royal/diffthese'
 " Plug 'camelcasemotion'
@@ -58,16 +48,28 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'Shougo/neosnippet.vim'
 " Plug 'Shougo/neosnippet-snippets'
 
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'benekastah/neomake', Cond(has('nvim'))
 
-Plug 'christoomey/vim-system-copy'
-Plug 'Valloric/YouCompleteMe'
-Plug 'ervandew/supertab'
+" Plug 'christoomey/vim-system-copy'
+" Plug 'Valloric/YouCompleteMe'
+" Plug 'ervandew/supertab'
+
+Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
+" Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-tslint', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-tslint-plugin', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-stylelint', {'do': 'yarn install --frozen-lockfile'}
 
 "
 " Searching
@@ -92,27 +94,37 @@ Plug 'craigemery/vim-autotag'
 "
 " Languages
 "
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'godoctor/godoctor.vim' " Some refactoring tools
-Plug 'jodosha/vim-godebug' " Debugger integration via delve
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+Plug 'jodosha/vim-godebug', { 'for': 'go' } " Debugger integration via delve
 
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'tpope/vim-endwise', { 'for': 'ruby' }
+
 " Plug 'markcornick/vim-hashicorp-tools'
-Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'typescript', 'typescript.tsx'],  'branch': 'main'}
+Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+Plug 'jparise/vim-graphql', {'for': ['graphql', 'javascript', 'typescript']}
+
 Plug 'plasticboy/vim-markdown'
-" Plug 'slim-template/vim-slim'
-" Plug 'nono/vim-handlebars'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-haml'
+Plug 'uarun/vim-protobuf'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'elzr/vim-json'
+Plug 'vim-scripts/indentpython.vim'
+" Plug 'ecomba/vim-ruby-refactoring'
+" Plug 'nelstrom/vim-textobj-rubyblock'
+" Plug 'jgdavey/vim-blockle'
+" Plug 'mxw/vim-jsx'
+" Plug 'slim-template/vim-slim'
+" Plug 'nono/vim-handlebars'
 " Plug 'tpope/vim-cucumber'
 " Plug 'mustache/vim-mustache-handlebars'
 " Plug 'rosstimson/scala-vim-support'
 " Plug 'guns/vim-clojure-static'
 " Plug 'chrisbra/csv.vim'
-Plug 'uarun/vim-protobuf'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'elzr/vim-json'
 " Plug 'elixir-lang/vim-elixir'
 " Plug 'jimenezrick/vimerl'
 " Plug 'toml-lang/toml'
@@ -121,19 +133,18 @@ Plug 'elzr/vim-json'
 " Plug 'powerman/vim-plugin-AnsiEsc.git'
 " Plug 'lucidstack/hex.vim'
 " Plug 'mattreduce/vim-mix'
-Plug 'vim-scripts/indentpython.vim'
 
 "
 " Development Tool Integration
 "
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'janko-m/vim-test'
+Plug 'jgdavey/tslime.vim'
 " Plug 'tjennings/git-grep-vim'
 " Plug 'tpope/vim-dispatch'
 " Plug 'carlobaldassi/ConqueTerm'
 " Plug 'sjl/vitality.vim'
-Plug 'janko-m/vim-test'
-Plug 'jgdavey/tslime.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
