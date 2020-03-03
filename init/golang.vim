@@ -1,6 +1,12 @@
 autocmd FileType go set noexpandtab
 autocmd FileType go set nolist
 
+function! OnGoSave()
+    :GoMetaLinter
+endfunction
+
+autocmd BufWritePre *.go :call OnGoSave()
+
 let g:go_fmt_command = "goimports"
 au Filetype go nnoremap <leader>gd :vsp <CR>:exe "GoDef" <CR>
 au Filetype go nnoremap <leader>gr :GoRun %<CR>
@@ -40,8 +46,18 @@ let g:go_metalinter_enabled = [
     \ 'goconst',
     \ 'gocyclo',
     \ 'golint',
+    \ 'gosec',
     \ 'gosimple',
+    \ 'govet',
     \ 'ineffassign',
+    \ 'interfacer',
+    \ 'megacheck',
+    \ 'misspell',
+    \ 'nakedret',
+    \ 'structcheck',
+    \ 'unconvert',
+    \ 'unparam',
+    \ 'varcheck',
     \ 'vet',
     \ 'vetshadow'
 \]
