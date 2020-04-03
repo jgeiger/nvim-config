@@ -89,7 +89,7 @@ Plug 'junegunn/fzf.vim'
 "
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
-Plug 'craigemery/vim-autotag'
+" Plug 'craigemery/vim-autotag'
 
 "
 " Languages
