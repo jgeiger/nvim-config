@@ -1,8 +1,9 @@
 let g:rg_command = '
   \ rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --color "always"
-  \ -g "*.{js,json,php,md,styl,css,jade,html,haml,config,py,cpp,c,go,hs,rb,conf,rs}"
-  \ -g "\!*.{min.js,swp,o,zip}" 
-  \ -g "\!{.git,node_modules,vendor}/*" '
+  \ --glob "\!*.{min.js,swp,o,zip}"
+  \ --glob "\!{.git,node_modules}/*"
+  \ --glob "\!{.vendor/**/*}"
+  \ --glob "*.{js,json,php,md,styl,css,jade,html,haml,config,py,cpp,c,go,hs,rb,conf,rs}" '
 
 command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
