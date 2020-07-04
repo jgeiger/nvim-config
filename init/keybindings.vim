@@ -89,13 +89,6 @@ cmap <C-A> <C-B>
 " map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 " map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 
-" Run tests
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>A :TestSuite<CR>
-nmap <silent> <leader>tt :TestLast<CR>
-nmap <silent> <leader>tv :TestVisit<CR>
-
 " Disable middle mouse button, F1
 map <MiddleMouse>   <Nop>
 imap <MiddleMouse>  <Nop>

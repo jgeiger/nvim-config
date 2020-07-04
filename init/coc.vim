@@ -3,7 +3,8 @@ inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = "<TAB>"
 let g:coc_snippet_prev = "<S-TAB>"
 
-let g:coc_global_extensions = ['coc-solargraph', 'coc-snippets', 'coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-tslint', 'coc-tslint-plugin', 'coc-css', 'coc-json', 'coc-yaml', 'coc-stylelint']
+" let g:coc_global_extensions = ['coc-solargraph', 'coc-snippets', 'coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-tslint', 'coc-tslint-plugin', 'coc-css', 'coc-json', 'coc-yaml', 'coc-stylelint']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-prettier', 'coc-tsserver', 'coc-tslint', 'coc-tslint-plugin', 'coc-css', 'coc-json', 'coc-yaml', 'coc-stylelint']
 
 " Better display for messages
 set cmdheight=2

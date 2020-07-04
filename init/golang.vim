@@ -20,6 +20,10 @@ au FileType go nmap <Leader>ml <Plug>(go-metalinter)
 
 au Filetype go nnoremap <leader>gg :GoDeclsDir<CR>
 
+au FileType go nmap <Leader>dt :DlvTest<CR>
+au FileType go nmap <Leader>db :DlvAddBreakpoint<CR>
+au FileType go nmap <Leader>dc :DlvClearAll<CR>
+
 "let g:syntastic_go_checkers = "gofmt"
 
 " let g:go_highlight_functions = 1

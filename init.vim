@@ -59,7 +59,7 @@ Plug 'benekastah/neomake', Cond(has('nvim'))
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'ervandew/supertab'
 
-Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
+Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': { -> coc#util#install() } }
 " Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
@@ -95,7 +95,8 @@ Plug 'majutsushi/tagbar'
 " Languages
 "
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-Plug 'jodosha/vim-godebug', { 'for': 'go' } " Debugger integration via delve
+" Plug 'jodosha/vim-godebug', { 'for': 'go' } " Debugger integration via delve
+Plug 'sebdah/vim-delve', { 'for': 'go' } " Debugger integration via delve
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
