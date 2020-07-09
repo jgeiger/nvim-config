@@ -23,6 +23,8 @@ au Filetype go nnoremap <leader>gg :GoDeclsDir<CR>
 au FileType go nmap <Leader>dt :DlvTest<CR>
 au FileType go nmap <Leader>db :DlvAddBreakpoint<CR>
 au FileType go nmap <Leader>dc :DlvClearAll<CR>
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 "let g:syntastic_go_checkers = "gofmt"
 
